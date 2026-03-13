@@ -24,7 +24,12 @@ export const AuthProvider = ({ children }) => {
   const setActiveRole = async (role) => {
     clearToasts();
     
-    if (role && user) {
+    // Only call backend if this is a ROLE SWITCH (user already has an active role)
+    // For initial role selection (after registration), just update localStorage
+    const previousRole = activeRoleState;
+    const isRoleSwitch = role && previousRole && previousRole !== role && user;
+
+    if (isRoleSwitch) {
       try {
         setLoading(true);
         // Sync role change with backend which returns a new token
@@ -67,7 +72,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ user, loading, activeRole, setActiveRole, login, register, logout }}>
+    <AuthContext.Provider value={{ user, setUser, loading, activeRole, setActiveRole, login, register, logout }}>
       {children}
     </AuthContext.Provider>
   );

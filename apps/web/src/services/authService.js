@@ -6,10 +6,8 @@ const authService = {
       const response = await apiClient.post('/auth/register', userData);
       if (response.data.token) {
         localStorage.setItem('token', response.data.token);
-        if (response.data.user) {
-          localStorage.setItem('user', JSON.stringify(response.data.user));
-          localStorage.setItem('role', response.data.user.role || '');
-        }
+        localStorage.setItem('user', JSON.stringify(response.data));
+        localStorage.setItem('role', response.data.role || '');
       }
       return response.data;
     } catch (error) {
@@ -23,10 +21,8 @@ const authService = {
       const response = await apiClient.post('/auth/login', credentials);
       if (response.data.token) {
         localStorage.setItem('token', response.data.token);
-        if (response.data.user) {
-          localStorage.setItem('user', JSON.stringify(response.data.user));
-          localStorage.setItem('role', response.data.user.role || '');
-        }
+        localStorage.setItem('user', JSON.stringify(response.data));
+        localStorage.setItem('role', response.data.role || '');
       }
       return response.data;
     } catch (error) {

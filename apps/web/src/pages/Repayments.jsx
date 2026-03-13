@@ -5,6 +5,7 @@ import repaymentService from '../services/repaymentService';
 import loanService from '../services/loanService';
 import { Loader2, IndianRupee, Calendar, CheckCircle2 } from 'lucide-react';
 import { validatePositiveNumber } from '../utils/validation';
+import { useAuth } from '../context/AuthContext';
 
 const Repayments = () => {
   const { t } = useTranslation();
@@ -18,6 +19,7 @@ const Repayments = () => {
 
   const [selectedLoanId, setSelectedLoanId] = useState('');
   const [loans, setLoans] = useState([]);
+  const { user } = useAuth();
 
   useEffect(() => {
     const fetchLoans = async () => {

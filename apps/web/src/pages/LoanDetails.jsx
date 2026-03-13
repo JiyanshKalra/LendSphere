@@ -9,7 +9,7 @@ import loanService from '../services/loanService';
 import offerService from '../services/offerService';
 import { Loader2, AlertCircle, IndianRupee, Clock, History, ShoppingBag } from 'lucide-react';
 
-import { validatePositiveNumber, validatePercentage } from '../utils/validation';
+import { validatePositiveNumber } from '../utils/validation';
 
 const LoanDetails = () => {
   const { id } = useParams();
@@ -23,7 +23,7 @@ const LoanDetails = () => {
   const [error, setError] = useState('');
   
   // Offer Form State
-  const [offerData, setOfferData] = useState({ amount: '', interestRate: '' });
+  const [offerData, setOfferData] = useState({ interestRate: '', repaymentPeriod: '' });
   const [offerErrors, setOfferErrors] = useState({});
   const [submittingOffer, setSubmittingOffer] = useState(false);
 
@@ -56,8 +56,8 @@ const LoanDetails = () => {
 
   const validateOffer = () => {
     const newErrors = {};
-    if (!validatePositiveNumber(offerData.amount)) newErrors.amount = 'Please enter a positive amount.';
-    if (!validatePercentage(offerData.interestRate)) newErrors.interestRate = 'Rate must be between 0 and 100%.';
+    if (!validatePositiveNumber(offerData.interestRate)) newErrors.interestRate = 'Rate must be between 0 and 100%.';
+    if (!validatePositiveNumber(offerData.repaymentPeriod)) newErrors.repaymentPeriod = 'Please enter a repayment period.';
     setOfferErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -70,12 +70,12 @@ const LoanDetails = () => {
       setSubmittingOffer(true);
       await offerService.submitOffer({
         loanId: id,
-        amount: Number(offerData.amount),
-        interestRate: Number(offerData.interestRate)
+        interestRate: Number(offerData.interestRate),
+        repaymentPeriod: Number(offerData.repaymentPeriod)
         // lenderId now derived on backend
       });
       addToast({ type: 'success', title: 'Offer Sent', message: 'Your community offer has been submitted.' });
-      setOfferData({ amount: '', interestRate: '' });
+      setOfferData({ interestRate: '', repaymentPeriod: '' });
       // Fetch updated offers
       const offersRes = await offerService.getLoanOffers(id);
       setOffers(offersRes.data);
@@ -223,18 +223,18 @@ const LoanDetails = () => {
            </h3>
            <form onSubmit={handleSubmitOffer} className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-1.5">
-                 <label className="text-xs font-semibold text-gray-700">Lending Amount (₹)</label>
+                 <label className="text-xs font-semibold text-gray-700">Repayment Period (Months)</label>
                  <input 
                     type="number"
-                    name="amount"
-                    value={offerData.amount}
+                    name="repaymentPeriod"
+                    value={offerData.repaymentPeriod}
                     onChange={handleOfferChange}
-                    placeholder="e.g. 10000"
+                    placeholder="e.g. 12"
                     className={`w-full border rounded-lg px-3 py-2 text-sm font-medium outline-none transition-all ${
-                      offerErrors.amount ? 'border-red-400 bg-red-50' : 'border-gray-200 focus:ring-2 focus:ring-[#174E4F]/10 focus:border-[#174E4F]'
+                      offerErrors.repaymentPeriod ? 'border-red-400 bg-red-50' : 'border-gray-200 focus:ring-2 focus:ring-[#174E4F]/10 focus:border-[#174E4F]'
                     }`}
                  />
-                 {offerErrors.amount && <p className="text-red-500 text-[10px] font-semibold">{offerErrors.amount}</p>}
+                 {offerErrors.repaymentPeriod && <p className="text-red-500 text-[10px] font-semibold">{offerErrors.repaymentPeriod}</p>}
               </div>
               <div className="space-y-1.5">
                  <label className="text-xs font-semibold text-gray-700">Interest Rate (%)</label>
@@ -282,7 +282,7 @@ const LoanDetails = () => {
                 <OfferCard 
                   key={offer._id} 
                   offer={offer} 
-                  isBorrower={user && loan.borrower && user.id === loan.borrower._id}
+                  isBorrower={user && loan.borrowerId && (user.id === loan.borrowerId.toString() || user.id === loan.borrowerId._id?.toString())}
                   onAccept={handleAcceptOffer}
                 />
               ))}

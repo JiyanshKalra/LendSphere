@@ -19,8 +19,10 @@ const ProtectedRoute = ({ children }) => {
     return <Navigate to="/login" state={{ from: location }} replace />;
   }
 
-  // If user is logged in but hasn't picked a role for the session
-  if (!activeRole && location.pathname !== '/select-role') {
+  // If user is logged in but hasn't picked a role for the session, redirect to role selection.
+  // Exceptions: the select-role page itself and the onboarding pages
+  const onboardingPaths = ['/select-role', '/complete-borrower-profile', '/complete-lender-profile'];
+  if (!activeRole && !onboardingPaths.includes(location.pathname)) {
     return <Navigate to="/select-role" replace />;
   }
 

@@ -8,8 +8,16 @@ const RoleSelection = () => {
   const navigate = useNavigate();
 
   const handleSelect = (role) => {
+    // Set role in localStorage directly — no need for a backend call on first selection
+    localStorage.setItem('activeRole', role);
+    // Trigger local state update via setActiveRole but skip the API switchRole call
+    // by setting the value we checked from localStorage
     setActiveRole(role);
-    navigate('/');
+    if (role === 'lender') {
+      navigate('/dashboard/marketplace');
+    } else {
+      navigate('/dashboard');
+    }
   };
 
   return (

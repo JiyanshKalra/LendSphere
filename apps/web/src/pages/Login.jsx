@@ -43,7 +43,10 @@ const Login = () => {
       await login(formData);
       addToast({ type: 'success', title: 'Welcome Back!', message: 'You have logged in successfully.' });
       
-      const origin = location.state?.from?.pathname || '/dashboard';
+      // Redirect to intended page, or role-appropriate dashboard
+      const savedRole = localStorage.getItem('activeRole');
+      const defaultPath = savedRole === 'lender' ? '/dashboard/marketplace' : '/dashboard';
+      const origin = location.state?.from?.pathname || defaultPath;
       navigate(origin, { replace: true });
     } catch (err) {
       addToast({ 

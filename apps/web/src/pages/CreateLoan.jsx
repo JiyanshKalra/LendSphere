@@ -16,6 +16,7 @@ const CreateLoan = () => {
   const handleLoanSubmit = async (loanData) => {
     try {
       setLoading(true);
+      await loanService.createLoan(loanData);
       addToast({ type: 'success', title: 'Request Created', message: 'Your loan request has been submitted successfully.' });
       setSuccess(true);
       // Redirect based on role – Borrowers shouldn't go to Marketplace

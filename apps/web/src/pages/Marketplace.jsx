@@ -27,7 +27,7 @@ const Marketplace = () => {
       setLoading(true);
       const response = await loanService.getLoans({ ...filters, page: pagination.page, limit: pagination.limit });
       setLoans(response.data);
-      setPagination(prev => ({ ...prev, totalPages: response.pagination?.totalPages || 1 }));
+      setPagination(prev => ({ ...prev, totalPages: response.totalPages || 1 }));
     } catch (err) {
       console.error('Failed to fetch loans:', err);
       addToast({ 

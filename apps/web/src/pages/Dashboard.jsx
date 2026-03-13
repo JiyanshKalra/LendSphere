@@ -24,22 +24,29 @@ const Dashboard = () => {
       if (!user) return;
       try {
         setLoading(true);
-        const profilePromise = profileService.getProfile(user.id);
-        const loansPromise = loanService.getLoans({ borrowerId: user.id });
         
-        const promises = [profilePromise, loansPromise];
-        
-        // For lenders, also fetch their offers count
-        if (activeRole === 'lender') {
-          promises.push(offerService.getMyOffers());
+        // Fetch profile (gracefully handle missing profile)
+        let profileData = null;
+        try {
+          const profileRes = await profileService.getProfile(user.id || user._id);
+          profileData = profileRes.data;
+        } catch (profileErr) {
+          console.warn('Profile not found, using defaults.');
         }
+        setProfile(profileData);
 
-        const results = await Promise.all(promises);
-        setProfile(results[0].data);
-        setLoans(results[1].data);
-        
-        if (activeRole === 'lender' && results[2]) {
-          setInvestmentCount(results[2].data?.length || 0);
+        if (activeRole === 'lender') {
+          // Lenders see: their offers + marketplace stats
+          const [offersRes, marketplaceRes] = await Promise.all([
+            offerService.getMyOffers(),
+            loanService.getLoans({})
+          ]);
+          setInvestmentCount(offersRes.data?.length || 0);
+          setLoans(marketplaceRes.data || []);
+        } else {
+          // Borrowers see their own loans
+          const loansRes = await loanService.getLoans({ borrowerId: user.id || user._id });
+          setLoans(loansRes.data || []);
         }
       } catch (err) {
         console.error('Dashboard fetch error:', err);
