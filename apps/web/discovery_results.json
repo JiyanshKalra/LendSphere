@@ -1,0 +1,523 @@
+[
+  {
+    "path": "/login",
+    "elements": [
+      {
+        "tag": "button",
+        "text": "Sign In",
+        "href": null,
+        "id": "",
+        "classes": "w-full bg-[#174E4F] hover:bg-[#0f3636] text-white font-semibold text-sm py-2.5 rounded-lg shadow-sm transition-all flex items-center justify-center gap-2",
+        "rect": {
+          "x": 481,
+          "y": 513,
+          "width": 318,
+          "height": 40,
+          "top": 513,
+          "right": 799,
+          "bottom": 553,
+          "left": 481
+        }
+      },
+      {
+        "tag": "a",
+        "text": "Lend Sphere",
+        "href": "/",
+        "id": "",
+        "classes": "inline-flex items-center gap-2",
+        "rect": {
+          "x": 569.109375,
+          "y": 34,
+          "width": 141.78125,
+          "height": 28,
+          "top": 34,
+          "right": 710.890625,
+          "bottom": 62,
+          "left": 569.109375
+        }
+      },
+      {
+        "tag": "a",
+        "text": "Create one now",
+        "href": "/register",
+        "id": "",
+        "classes": "text-[#174E4F] hover:underline",
+        "rect": {
+          "x": 670,
+          "y": 620,
+          "width": 110.359375,
+          "height": 16,
+          "top": 620,
+          "right": 780.359375,
+          "bottom": 636,
+          "left": 670
+        }
+      }
+    ]
+  },
+  {
+    "path": "/register",
+    "elements": [
+      {
+        "tag": "button",
+        "text": "Create Account",
+        "href": null,
+        "id": "",
+        "classes": "w-full bg-[#174E4F] hover:bg-[#0f3636] text-white font-semibold text-sm py-2.5 rounded-lg shadow-sm transition-all flex items-center justify-center gap-2 mt-4",
+        "rect": {
+          "x": 449,
+          "y": 578,
+          "width": 382,
+          "height": 40,
+          "top": 578,
+          "right": 831,
+          "bottom": 618,
+          "left": 449
+        }
+      },
+      {
+        "tag": "a",
+        "text": "Lend Sphere",
+        "href": "/",
+        "id": "",
+        "classes": "inline-flex items-center gap-2",
+        "rect": {
+          "x": 569.109375,
+          "y": 24,
+          "width": 141.78125,
+          "height": 28,
+          "top": 24,
+          "right": 710.890625,
+          "bottom": 52,
+          "left": 569.109375
+        }
+      },
+      {
+        "tag": "a",
+        "text": "Sign in here",
+        "href": "/login",
+        "id": "",
+        "classes": "text-[#174E4F] hover:underline",
+        "rect": {
+          "x": 691.171875,
+          "y": 685,
+          "width": 83.75,
+          "height": 16,
+          "top": 685,
+          "right": 774.921875,
+          "bottom": 701,
+          "left": 691.171875
+        }
+      },
+      {
+        "tag": "select",
+        "text": "Borrow Money\nInvest / Lend Money",
+        "href": null,
+        "id": "",
+        "classes": "w-full border border-gray-200 rounded-lg px-3 py-2 text-sm font-medium outline-none focus:ring-2 focus:ring-teal-200 focus:border-[#174E4F] bg-white appearance-none",
+        "rect": {
+          "x": 650,
+          "y": 358,
+          "width": 181,
+          "height": 38,
+          "top": 358,
+          "right": 831,
+          "bottom": 396,
+          "left": 650
+        }
+      }
+    ]
+  },
+  {
+    "path": "/",
+    "elements": [
+      {
+        "tag": "button",
+        "text": "Sign In",
+        "href": null,
+        "id": "",
+        "classes": "w-full bg-[#174E4F] hover:bg-[#0f3636] text-white font-semibold text-sm py-2.5 rounded-lg shadow-sm transition-all flex items-center justify-center gap-2",
+        "rect": {
+          "x": 481,
+          "y": 513,
+          "width": 318,
+          "height": 40,
+          "top": 513,
+          "right": 799,
+          "bottom": 553,
+          "left": 481
+        }
+      },
+      {
+        "tag": "a",
+        "text": "Lend Sphere",
+        "href": "/",
+        "id": "",
+        "classes": "inline-flex items-center gap-2",
+        "rect": {
+          "x": 569.109375,
+          "y": 34,
+          "width": 141.78125,
+          "height": 28,
+          "top": 34,
+          "right": 710.890625,
+          "bottom": 62,
+          "left": 569.109375
+        }
+      },
+      {
+        "tag": "a",
+        "text": "Create one now",
+        "href": "/register",
+        "id": "",
+        "classes": "text-[#174E4F] hover:underline",
+        "rect": {
+          "x": 670,
+          "y": 620,
+          "width": 110.359375,
+          "height": 16,
+          "top": 620,
+          "right": 780.359375,
+          "bottom": 636,
+          "left": 670
+        }
+      }
+    ]
+  },
+  {
+    "path": "/marketplace",
+    "elements": [
+      {
+        "tag": "button",
+        "text": "Sign In",
+        "href": null,
+        "id": "",
+        "classes": "w-full bg-[#174E4F] hover:bg-[#0f3636] text-white font-semibold text-sm py-2.5 rounded-lg shadow-sm transition-all flex items-center justify-center gap-2",
+        "rect": {
+          "x": 481,
+          "y": 513,
+          "width": 318,
+          "height": 40,
+          "top": 513,
+          "right": 799,
+          "bottom": 553,
+          "left": 481
+        }
+      },
+      {
+        "tag": "a",
+        "text": "Lend Sphere",
+        "href": "/",
+        "id": "",
+        "classes": "inline-flex items-center gap-2",
+        "rect": {
+          "x": 569.109375,
+          "y": 34,
+          "width": 141.78125,
+          "height": 28,
+          "top": 34,
+          "right": 710.890625,
+          "bottom": 62,
+          "left": 569.109375
+        }
+      },
+      {
+        "tag": "a",
+        "text": "Create one now",
+        "href": "/register",
+        "id": "",
+        "classes": "text-[#174E4F] hover:underline",
+        "rect": {
+          "x": 670,
+          "y": 620,
+          "width": 110.359375,
+          "height": 16,
+          "top": 620,
+          "right": 780.359375,
+          "bottom": 636,
+          "left": 670
+        }
+      }
+    ]
+  },
+  {
+    "path": "/chat",
+    "elements": [
+      {
+        "tag": "button",
+        "text": "Sign In",
+        "href": null,
+        "id": "",
+        "classes": "w-full bg-[#174E4F] hover:bg-[#0f3636] text-white font-semibold text-sm py-2.5 rounded-lg shadow-sm transition-all flex items-center justify-center gap-2",
+        "rect": {
+          "x": 481,
+          "y": 513,
+          "width": 318,
+          "height": 40,
+          "top": 513,
+          "right": 799,
+          "bottom": 553,
+          "left": 481
+        }
+      },
+      {
+        "tag": "a",
+        "text": "Lend Sphere",
+        "href": "/",
+        "id": "",
+        "classes": "inline-flex items-center gap-2",
+        "rect": {
+          "x": 569.109375,
+          "y": 34,
+          "width": 141.78125,
+          "height": 28,
+          "top": 34,
+          "right": 710.890625,
+          "bottom": 62,
+          "left": 569.109375
+        }
+      },
+      {
+        "tag": "a",
+        "text": "Create one now",
+        "href": "/register",
+        "id": "",
+        "classes": "text-[#174E4F] hover:underline",
+        "rect": {
+          "x": 670,
+          "y": 620,
+          "width": 110.359375,
+          "height": 16,
+          "top": 620,
+          "right": 780.359375,
+          "bottom": 636,
+          "left": 670
+        }
+      }
+    ]
+  },
+  {
+    "path": "/profile",
+    "elements": [
+      {
+        "tag": "button",
+        "text": "Sign In",
+        "href": null,
+        "id": "",
+        "classes": "w-full bg-[#174E4F] hover:bg-[#0f3636] text-white font-semibold text-sm py-2.5 rounded-lg shadow-sm transition-all flex items-center justify-center gap-2",
+        "rect": {
+          "x": 481,
+          "y": 513,
+          "width": 318,
+          "height": 40,
+          "top": 513,
+          "right": 799,
+          "bottom": 553,
+          "left": 481
+        }
+      },
+      {
+        "tag": "a",
+        "text": "Lend Sphere",
+        "href": "/",
+        "id": "",
+        "classes": "inline-flex items-center gap-2",
+        "rect": {
+          "x": 569.109375,
+          "y": 34,
+          "width": 141.78125,
+          "height": 28,
+          "top": 34,
+          "right": 710.890625,
+          "bottom": 62,
+          "left": 569.109375
+        }
+      },
+      {
+        "tag": "a",
+        "text": "Create one now",
+        "href": "/register",
+        "id": "",
+        "classes": "text-[#174E4F] hover:underline",
+        "rect": {
+          "x": 670,
+          "y": 620,
+          "width": 110.359375,
+          "height": 16,
+          "top": 620,
+          "right": 780.359375,
+          "bottom": 636,
+          "left": 670
+        }
+      }
+    ]
+  },
+  {
+    "path": "/repayments",
+    "elements": [
+      {
+        "tag": "button",
+        "text": "Sign In",
+        "href": null,
+        "id": "",
+        "classes": "w-full bg-[#174E4F] hover:bg-[#0f3636] text-white font-semibold text-sm py-2.5 rounded-lg shadow-sm transition-all flex items-center justify-center gap-2",
+        "rect": {
+          "x": 481,
+          "y": 513,
+          "width": 318,
+          "height": 40,
+          "top": 513,
+          "right": 799,
+          "bottom": 553,
+          "left": 481
+        }
+      },
+      {
+        "tag": "a",
+        "text": "Lend Sphere",
+        "href": "/",
+        "id": "",
+        "classes": "inline-flex items-center gap-2",
+        "rect": {
+          "x": 569.109375,
+          "y": 34,
+          "width": 141.78125,
+          "height": 28,
+          "top": 34,
+          "right": 710.890625,
+          "bottom": 62,
+          "left": 569.109375
+        }
+      },
+      {
+        "tag": "a",
+        "text": "Create one now",
+        "href": "/register",
+        "id": "",
+        "classes": "text-[#174E4F] hover:underline",
+        "rect": {
+          "x": 670,
+          "y": 620,
+          "width": 110.359375,
+          "height": 16,
+          "top": 620,
+          "right": 780.359375,
+          "bottom": 636,
+          "left": 670
+        }
+      }
+    ]
+  },
+  {
+    "path": "/create-loan",
+    "elements": [
+      {
+        "tag": "button",
+        "text": "Sign In",
+        "href": null,
+        "id": "",
+        "classes": "w-full bg-[#174E4F] hover:bg-[#0f3636] text-white font-semibold text-sm py-2.5 rounded-lg shadow-sm transition-all flex items-center justify-center gap-2",
+        "rect": {
+          "x": 481,
+          "y": 513,
+          "width": 318,
+          "height": 40,
+          "top": 513,
+          "right": 799,
+          "bottom": 553,
+          "left": 481
+        }
+      },
+      {
+        "tag": "a",
+        "text": "Lend Sphere",
+        "href": "/",
+        "id": "",
+        "classes": "inline-flex items-center gap-2",
+        "rect": {
+          "x": 569.109375,
+          "y": 34,
+          "width": 141.78125,
+          "height": 28,
+          "top": 34,
+          "right": 710.890625,
+          "bottom": 62,
+          "left": 569.109375
+        }
+      },
+      {
+        "tag": "a",
+        "text": "Create one now",
+        "href": "/register",
+        "id": "",
+        "classes": "text-[#174E4F] hover:underline",
+        "rect": {
+          "x": 670,
+          "y": 620,
+          "width": 110.359375,
+          "height": 16,
+          "top": 620,
+          "right": 780.359375,
+          "bottom": 636,
+          "left": 670
+        }
+      }
+    ]
+  },
+  {
+    "path": "/marketplace/test-loan-id",
+    "elements": [
+      {
+        "tag": "button",
+        "text": "Sign In",
+        "href": null,
+        "id": "",
+        "classes": "w-full bg-[#174E4F] hover:bg-[#0f3636] text-white font-semibold text-sm py-2.5 rounded-lg shadow-sm transition-all flex items-center justify-center gap-2",
+        "rect": {
+          "x": 481,
+          "y": 513,
+          "width": 318,
+          "height": 40,
+          "top": 513,
+          "right": 799,
+          "bottom": 553,
+          "left": 481
+        }
+      },
+      {
+        "tag": "a",
+        "text": "Lend Sphere",
+        "href": "/",
+        "id": "",
+        "classes": "inline-flex items-center gap-2",
+        "rect": {
+          "x": 569.109375,
+          "y": 34,
+          "width": 141.78125,
+          "height": 28,
+          "top": 34,
+          "right": 710.890625,
+          "bottom": 62,
+          "left": 569.109375
+        }
+      },
+      {
+        "tag": "a",
+        "text": "Create one now",
+        "href": "/register",
+        "id": "",
+        "classes": "text-[#174E4F] hover:underline",
+        "rect": {
+          "x": 670,
+          "y": 620,
+          "width": 110.359375,
+          "height": 16,
+          "top": 620,
+          "right": 780.359375,
+          "bottom": 636,
+          "left": 670
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+
+  /* SaaS Dashboard Palette */
+  --color-primary: #174E4F;
+  --color-primary-dark: #0f3636;
+  --color-secondary: #ABC8A2;
+  --color-background: #F9FAFB;  /* gray-50 */
+  --color-card: #FFFFFF;
+  --color-success: #16A34A;
+  --color-warning: #F59E0B;
+  --color-danger: #DC2626;
+  --color-text-primary: #111827; /* gray-900 */
+  --color-text-secondary: #6B7280; /* gray-500 */
+}
+
+body {
+  background-color: var(--color-background);
+  color: #111827;       /* gray-900 */
+  font-size: 0.875rem;  /* 14px */
+  line-height: 1.5;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 { font-size: 1.5rem;  font-weight: 600; color: #111827; letter-spacing: -0.015em; }
+h2 { font-size: 1.125rem; font-weight: 600; color: #111827; }
+h3 { font-size: 1rem;     font-weight: 600; color: #111827; }
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #F9FAFB; }
+::-webkit-scrollbar-thumb { background: #E5E7EB; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #D1D5DB; }
