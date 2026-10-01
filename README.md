@@ -7,7 +7,7 @@ Lend Sphere is a peer-to-peer lending and microloan marketplace platform. It con
 The project is architected as a monorepo to seamlessly manage both frontend and backend codebases, along with shared libraries. 
 
 ### Tech Stack
-- **Frontend**: Next.js (React)
+- **Frontend**: React
 - **Backend**: Node.js with Express
 - **Database**: MongoDB
 - **Package Management**: npm workspaces
